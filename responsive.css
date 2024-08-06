@@ -1,0 +1,39 @@
+@media(max-width : 1100px){
+    .developer{
+        color: green;
+    }
+    .navigation{
+        background-color: red;
+    }
+}
+
+
+/* Tablet */
+@media(max-width : 1023px){
+    .developer{
+        color: red;
+    }
+    .nav-hamburger{
+        display: block;
+    }
+    .nav-sec-links{
+        flex-direction: column;
+    position: absolute;
+    background: #fff;
+    width: 100%;
+    left: 0;
+    top: 81px;
+    align-items: start;
+    /* transform: translateY(-400px); */
+    }
+    .nav-links{
+        flex-direction: column;
+    }
+}
+
+/* Mobile */
+@media(max-width : 767px){
+    .developer{
+        color: blue;
+    }
+}
