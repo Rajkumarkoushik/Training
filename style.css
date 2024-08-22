@@ -343,3 +343,24 @@ a{
     height: 100vh;
 }
 
+
+
+.image{
+    display: none;
+}
+.image-active{
+    display: block;   
+}
+.link{
+    position: fixed;
+    bottom: 30px;
+    right: 20px;
+    background-color: #ead345;
+    color: #fff;
+    border-radius: 50%;
+    padding: 10px;
+    transform: scale(0);
+}
+.link-active{
+    transform: scale(1);
+}
