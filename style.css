@@ -93,11 +93,7 @@ h1{
     padding: 30px;
     width: 50%;
 }
-input{
-    /* text-align: center; */
-    display: block;
-    margin: 0 auto;
-}
+
 /* a{
     text-align: center ;
     display: block;
@@ -366,4 +362,11 @@ a{
 }
 .trow{
     background-color: red;
+}
+
+.head{
+    display: none;
+}
+.head-active{
+    display: block;
 }

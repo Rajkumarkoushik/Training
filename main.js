@@ -28,14 +28,11 @@
 // const bank_balance = 600;
 // console.log(bank_balance);
 
-
 // Js keywords let,var,const,function,if,switch,for,return and try
 
 // Variables var before 2015,let and const - ES6 version (Ecma - script 6)
 
-
 // Scopes Block scope let and const, functional scope, global scope var.
-
 
 // Types of JavaScript Operators
 /* Arithmetic Operators
@@ -47,15 +44,11 @@ Bitwise Operators
 Ternary Operators
 Type Operators */
 
-
-
 // Data types 2 types primitive and non-primitive
 
 // string, number, boolean, null, undefined,
 
-
 // Functions named functions, arrow functions, immediately invoked function expression(IIFE), anonymous function, constructor function, async function, callback functions.
-
 
 // HTML Events some time browser does and some times user.
 
@@ -70,12 +63,9 @@ Type Operators */
 //     image.classList.toggle("image-active");
 // };
 
-
 // window.addEventListener("load", function myFunction() {
 //     image.classList.toggle("image-active");
 // });
-
-
 
 // const link = document.querySelector(".link");
 
@@ -89,7 +79,6 @@ Type Operators */
 
 // String methods
 // String extraction slice,substirng,substr   trim, trimstart, end , repeat, replace, replace all, indexof, lastindexof
-
 
 // Objects and arrays
 
@@ -107,12 +96,9 @@ Type Operators */
 // console.log(array1.sort());
 // console.log(array1.reverse());
 
-
 // console.log(Math.max.apply(null,computersMarks));
 
 // const developer = { name: "developer", maths: 50, physics: 56, computers: 60 };
-
-
 
 // console.log(persons[1]);
 
@@ -138,20 +124,83 @@ Type Operators */
 // });
 // console.log(filter);
 
-
 // const reduce = array.reduce((value, total) => {
 //     return value + total;
 // });
 // console.log(reduce);// 0 + 0 =0, 2 + 0 = 2,3 + 2 = 5
 
 const persons = [
-    {sno : 1, name: "developer", maths: 94, physics: 96, computers:  93, english: 95, sanskrit : 91, img: "../logo.svg"},
-    {sno : 2, name: "hello", maths: 50, physics: 56, computers: 60 , english: 35, sanskrit : 40,},
-    {sno : 3, name: "app", maths: 50, physics: 56, computers: 60, english: 35, sanskrit : 40, },
-    {sno : 4, name: "web", maths: 50, physics: 56, computers: 60 , english: 35, sanskrit : 40,},
-    {sno : 5, name: "aws", maths: 50, physics: 56, computers: 60 , english: 35, sanskrit : 40,},
-    {sno : 6, name: "azure", maths: 50, physics: 56, computers: 60 , english: 35, sanskrit : 40,},
-    {sno : 7, name: "hefew", maths: 50, physics: 56, computers: 60 , english: 35, sanskrit : 40,},
+  {
+    id: 0,
+    sno: 1,
+    name: "developer",
+    maths: 94,
+    physics: 96,
+    computers: 93,
+    english: 95,
+    sanskrit: 91,
+    img: "../logo.svg",
+  },
+  {
+    id: 1,
+    sno: 2,
+    name: "hello",
+    maths: 50,
+    physics: 56,
+    computers: 60,
+    english: 35,
+    sanskrit: 40,
+  },
+  {
+    id: 2,
+    sno: 3,
+    name: "app",
+    maths: 50,
+    physics: 56,
+    computers: 60,
+    english: 35,
+    sanskrit: 40,
+  },
+  {
+    id: 3,
+    sno: 4,
+    name: "web",
+    maths: 50,
+    physics: 56,
+    computers: 60,
+    english: 35,
+    sanskrit: 40,
+  },
+  {
+    id: 4,
+    sno: 5,
+    name: "aws",
+    maths: 50,
+    physics: 56,
+    computers: 60,
+    english: 35,
+    sanskrit: 40,
+  },
+  {
+    id: 5,
+    sno: 6,
+    name: "azure",
+    maths: 50,
+    physics: 56,
+    computers: 60,
+    english: 35,
+    sanskrit: 40,
+  },
+  {
+    id: 6,
+    sno: 7,
+    name: "hefew",
+    maths: 50,
+    physics: 56,
+    computers: 60,
+    english: 35,
+    sanskrit: 40,
+  },
 ];
 
 let table = "";
@@ -159,11 +208,11 @@ let table = "";
 // const filter = persons.filter((value) => {
 //     return value.maths < 90;
 // });
-persons.splice(2, 6, { sno: 8, name: "hi", maths: 50, physics: 56, computers: 60, english: 35, sanskrit: 40, }, { sno: 9, name: "application", maths: 50, physics: 56, computers: 60, english: 35, sanskrit: 40, });
+// persons.splice(2, 6, { sno: 8, name: "hi", maths: 50, physics: 56, computers: 60, english: 35, sanskrit: 40, }, { sno: 9, name: "application", maths: 50, physics: 56, computers: 60, english: 35, sanskrit: 40, });
 
 persons.forEach((value) => {
-    table += `
-          <tr class="trow">
+  table += `
+          <tr class="trow" id="${value.id}"
         <td>${value.sno}</td> 
         <td>${value.name}</td>
         <td>${value.maths}</td>
@@ -172,9 +221,280 @@ persons.forEach((value) => {
         <td>${value.english}</td>
         <td>${value.sanskrit}</td>
         <img src=${value.img}>
+        <td><button onclick="buttonRemove(${value.id})">remove</button></td>
       </tr>
-    `
-    document.querySelector(".tbody").innerHTML = table;
+    `;
+  document.querySelector(".tbody").innerHTML = table;
 });
+
+// function buttonRemove(id) {
+//   console.log("button clicked" + id);
+//   const row = document.getElementById(`${id}`);  // Find the row using the id
+//   if (row) {
+//     row.parentNode.removeChild(row);  // Remove the row from the table
+//   }
+// };
+
+// Js date objects get, set methods
+// Milliseconds
+
+// Math objects round rounds to the nearest integer, ceil, floor, trunc, sign, pow, sqrt, abs, random.
+
+// // const x = -81.9;
+// // const y = 3;
+// console.log(Math.floor(Math.random() * 900000 + 100000)); // 0 to 1 + 1000 1000 to 9999
+
+// function buttonClick() {
+//   document.querySelector(".heading").innerHTML = Math.floor(Math.random() * 900000 + 100000);
+// };
+
+// If else statements
+
+// Switch
+
+// const date  = new Date().getDay();
+// switch (date) {
+//   case 0:
+//     console.log("sunday");
+//     break;
+//   case 1:
+//     console.log("monday");
+//     break;
+//   case 2:
+//     console.log("tuesday");
+//     break;
+//   case 3:
+//     console.log("wednesday");
+//     break;
+//   case 4:
+//     console.log("thursday");
+//     break;
+//   case 5:
+//     console.log("friday");
+//     break;
+//   case 6:
+//     console.log("saturday");
+//     break;
+//   default:
+//     console.log("object")
+// };
+
+const apDistricts = [
+  "Anantapur",
+  "Chittoor",
+  "East Godavari",
+  "Guntur",
+  "YSR Kadapa",
+  "Krishna",
+  "Kurnool",
+  "Nellore",
+  "Prakasam",
+  "Srikakulam",
+  "Visakhapatnam",
+  "Vizianagaram",
+  "West Godavari",
+  "Anakapalli",
+  "Annamayya",
+  "Bapatla",
+  "Dr. B.R. Ambedkar Konaseema",
+  "Eluru",
+  "NTR",
+  "Palnadu",
+  "Parvathipuram Manyam",
+  "Sri Sathya Sai",
+  "Sri Potti Sriramulu Nellore",
+  "Tirupati",
+];
+const tsDistricts = [
+  "Adilabad",
+  "Bhadradri Kothagudem",
+  "Hyderabad",
+  "Jagtial",
+  "Jangaon",
+  "Jayashankar Bhupalpally",
+  "Jogulamba Gadwal",
+  "Kamareddy",
+  "Karimnagar",
+  "Khammam",
+  "Kumuram Bheem Asifabad",
+  "Mahabubabad",
+  "Mahabubnagar",
+  "Mancherial",
+  "Medak",
+  "Medchal-Malkajgiri",
+  "Mulugu",
+  "Nagarkurnool",
+  "Nalgonda",
+  "Narayanpet",
+  "Nirmal",
+  "Nizamabad",
+  "Peddapalli",
+  "Rajanna Sircilla",
+  "Rangareddy",
+  "Sangareddy",
+  "Siddipet",
+  "Suryapet",
+  "Vikarabad",
+  "Wanaparthy",
+  "Warangal Rural",
+  "Warangal Urban",
+  "Yadadri Bhuvanagiri",
+];
+const karnatakaDistricts = [
+  "Bagalkot",
+  "Ballari",
+  "Belagavi",
+  "Bengaluru Rural",
+  "Bengaluru Urban",
+  "Bidar",
+  "Chamarajanagar",
+  "Chikkaballapur",
+  "Chikkamagaluru",
+  "Chitradurga",
+  "Dakshina Kannada",
+  "Davanagere",
+  "Dharwad",
+  "Gadag",
+  "Hassan",
+  "Haveri",
+  "Kalaburagi",
+  "Kodagu",
+  "Kolar",
+  "Koppal",
+  "Mandya",
+  "Mysuru",
+  "Raichur",
+  "Ramanagara",
+  "Shivamogga",
+  "Tumakuru",
+  "Udupi",
+  "Uttara Kannada",
+  "Vijayapura",
+  "Yadgir",
+];
+const arunachalPradeshDistricts = [
+  "Anjaw",
+  "Changlang",
+  "Dibang Valley",
+  "East Kameng",
+  "East Siang",
+  "Kamle",
+  "Kra Daadi",
+  "Kurung Kumey",
+  "Lepa Rada",
+  "Lohit",
+  "Longding",
+  "Lower Dibang Valley",
+  "Lower Siang",
+  "Lower Subansiri",
+  "Namsai",
+  "Pakke-Kessang",
+  "Papum Pare",
+  "Shi Yomi",
+  "Siang",
+  "Tawang",
+  "Tirap",
+  "Upper Siang",
+  "Upper Subansiri",
+  "West Kameng",
+  "West Siang",
+];
+const tamilNaduDistricts = [
+  "Ariyalur",
+  "Chengalpattu",
+  "Chennai",
+  "Coimbatore",
+  "Cuddalore",
+  "Dharmapuri",
+  "Dindigul",
+  "Erode",
+  "Kallakurichi",
+  "Kanchipuram",
+  "Kanyakumari",
+  "Karur",
+  "Krishnagiri",
+  "Madurai",
+  "Mayiladuthurai",
+  "Nagapattinam",
+  "Namakkal",
+  "Nilgiris",
+  "Perambalur",
+  "Pudukkottai",
+  "Ramanathapuram",
+  "Ranipet",
+  "Salem",
+  "Sivaganga",
+  "Tenkasi",
+  "Thanjavur",
+  "Theni",
+  "Thiruvallur",
+  "Thiruvarur",
+  "Thoothukudi",
+  "Tiruchirappalli",
+  "Tirunelveli",
+  "Tirupattur",
+  "Tiruppur",
+  "Tiruvannamalai",
+  "Vellore",
+  "Viluppuram",
+  "Virudhunagar",
+];
+
+
+function showDistricts() {
+  const statesDropdown = document.getElementById("states").value;
+  const districtsDropdown = document.getElementById("districts");
+
+  let districts = [];
+
+  switch (statesDropdown) {
+    case "ap":
+      districts = apDistricts;
+      break;
+    case "ts":
+      districts = tsDistricts;
+      break;
+    case "tn":
+      districts = tamilNaduDistricts;
+      break;
+    case "arunachal":
+      districts = arunachalPradeshDistricts;
+      break;
+    case "karnataka":
+      districts = karnatakaDistricts;
+      break;
+    default:
+      districts = [];
+  };
+
+  districtsDropdown.innerHTML = `<option value="">Select District</option>`;
+
+  districts.forEach((value) => {
+    const option = document.createElement("option");
+    option.value = value;
+    option.textContent = value;
+    districtsDropdown.appendChild(option);
+  });
+};
+
+
+// SetTimeout and setInterval
+
+// dom document object model and bom
+
+const input = document.querySelector(".input");
+const button = document.querySelector(".button");
+const lists = document.querySelector(".lists");
+
+button.addEventListener("click", (e) => {
+  e.preventDefault();
+  const li = document.createElement("li");
+  li.innerText = input.value;
+  lists.appendChild(li);
+
+  input.value = "";
+})
+
+
 
 

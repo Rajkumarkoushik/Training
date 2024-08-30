@@ -1,51 +1,91 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0 user-scalable=no">
-    <meta name="keyword" content="Best restaurant near me, ">
-    <meta name="description" content="">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0 user-scalable=no"
+    />
+    <meta name="keyword" content="Best restaurant near me, " />
+    <meta name="description" content="" />
     <title>Flipkart</title>
-    <link rel="shortcut icon" href="/Wipro_Primary Logo_Color_RGB.svg" type="image/x-icon"> <!-- Self closing tags-->
+    <link
+      rel="shortcut icon"
+      href="/Wipro_Primary Logo_Color_RGB.svg"
+      type="image/x-icon"
+    />
+    <!-- Self closing tags-->
     <!-- Aos link -->
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
     <!-- Css link -->
-     <link rel="stylesheet" href="/style.css">
-     <link rel="stylesheet" href="/responsive.css">
-     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-</head>
-<body>
-    
-  <table>
-    <thead>
-      <th>
-        <tr>
-          <th>S.NO</th>
-          <th>Name</th>
-          <th>Maths</th>
-          <th>Computers</th>
-          <th>Physics</th>
-          <th>English</th>
-          <th>Sanskrit</th>
-          <th>image</th>
-          <th>Result</th>
-          <th>remove</th>
-        </tr>
-      </th>
-    </thead>
-    <tbody class="tbody">
+    <link rel="stylesheet" href="/style.css" />
+    <link rel="stylesheet" href="/responsive.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <table>
+      <thead>
+        <th>
+          <tr>
+            <th>S.NO</th>
+            <th>Name</th>
+            <th>Maths</th>
+            <th>Computers</th>
+            <th>Physics</th>
+            <th>English</th>
+            <th>Sanskrit</th>
+            <th>image</th>
+            <th>Result</th>
+            <th>remove</th>
+          </tr>
+        </th>
+      </thead>
+      <tbody class="tbody"></tbody>
+    </table>
 
-    </tbody>
-  </table>
+    <select name="states" id="states" onchange="showDistricts()">
+      <option value="">Select State</option>
+      <option value="ap">Andhra Pradesh</option>
+      <option value="ts">Telangana</option>
+      <option value="tn">Tamil Nadu</option>
+      <option value="arunachal">Arunachal Pradesh</option>
+      <option value="karnataka">Karnataka</option>
+  </select>
+  
+  <select name="districts" id="districts">
+      <option value="">Select District</option>
+  </select>
 
- <!-- Aos js link -->
- <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
- <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
- <!-- Main js link -->
-<script src="/main.js"></script>
+  <button onclick="buttonClick()">click</button>
+  <h2 class="head">hello</h2>
 
- <script>
-    AOS.init();
-  </script>
- </body>
+   
+  <section>
+    <form action="">
+      <input type="text" class="input">
+      <button type="submit" class="button">submit</button>
+    </form>
+  </section>
+
+  <div>
+    <ul class="lists">
+
+    </ul>
+  </div>
+    <!-- Aos js link -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+    <!-- Main js link -->
+    <script src="/main.js"></script>
+
+    <script>
+      AOS.init();
+    </script>
+  </body>
 </html>
