@@ -210,22 +210,22 @@ let table = "";
 // });
 // persons.splice(2, 6, { sno: 8, name: "hi", maths: 50, physics: 56, computers: 60, english: 35, sanskrit: 40, }, { sno: 9, name: "application", maths: 50, physics: 56, computers: 60, english: 35, sanskrit: 40, });
 
-persons.forEach((value) => {
-  table += `
-          <tr class="trow" id="${value.id}"
-        <td>${value.sno}</td> 
-        <td>${value.name}</td>
-        <td>${value.maths}</td>
-        <td>${value.physics}</td>
-        <td>${value.computers}</td>
-        <td>${value.english}</td>
-        <td>${value.sanskrit}</td>
-        <img src=${value.img}>
-        <td><button onclick="buttonRemove(${value.id})">remove</button></td>
-      </tr>
-    `;
-  document.querySelector(".tbody").innerHTML = table;
-});
+// persons.forEach((value) => {
+//   table += `
+//           <tr class="trow" id="${value.id}"
+//         <td>${value.sno}</td>
+//         <td>${value.name}</td>
+//         <td>${value.maths}</td>
+//         <td>${value.physics}</td>
+//         <td>${value.computers}</td>
+//         <td>${value.english}</td>
+//         <td>${value.sanskrit}</td>
+//         <img src=${value.img}>
+//         <td><button onclick="buttonRemove(${value.id})">remove</button></td>
+//       </tr>
+//     `;
+//   document.querySelector(".tbody").innerHTML = table;
+// });
 
 // function buttonRemove(id) {
 //   console.log("button clicked" + id);
@@ -279,222 +279,317 @@ persons.forEach((value) => {
 //     console.log("object")
 // };
 
-const apDistricts = [
-  "Anantapur",
-  "Chittoor",
-  "East Godavari",
-  "Guntur",
-  "YSR Kadapa",
-  "Krishna",
-  "Kurnool",
-  "Nellore",
-  "Prakasam",
-  "Srikakulam",
-  "Visakhapatnam",
-  "Vizianagaram",
-  "West Godavari",
-  "Anakapalli",
-  "Annamayya",
-  "Bapatla",
-  "Dr. B.R. Ambedkar Konaseema",
-  "Eluru",
-  "NTR",
-  "Palnadu",
-  "Parvathipuram Manyam",
-  "Sri Sathya Sai",
-  "Sri Potti Sriramulu Nellore",
-  "Tirupati",
-];
-const tsDistricts = [
-  "Adilabad",
-  "Bhadradri Kothagudem",
-  "Hyderabad",
-  "Jagtial",
-  "Jangaon",
-  "Jayashankar Bhupalpally",
-  "Jogulamba Gadwal",
-  "Kamareddy",
-  "Karimnagar",
-  "Khammam",
-  "Kumuram Bheem Asifabad",
-  "Mahabubabad",
-  "Mahabubnagar",
-  "Mancherial",
-  "Medak",
-  "Medchal-Malkajgiri",
-  "Mulugu",
-  "Nagarkurnool",
-  "Nalgonda",
-  "Narayanpet",
-  "Nirmal",
-  "Nizamabad",
-  "Peddapalli",
-  "Rajanna Sircilla",
-  "Rangareddy",
-  "Sangareddy",
-  "Siddipet",
-  "Suryapet",
-  "Vikarabad",
-  "Wanaparthy",
-  "Warangal Rural",
-  "Warangal Urban",
-  "Yadadri Bhuvanagiri",
-];
-const karnatakaDistricts = [
-  "Bagalkot",
-  "Ballari",
-  "Belagavi",
-  "Bengaluru Rural",
-  "Bengaluru Urban",
-  "Bidar",
-  "Chamarajanagar",
-  "Chikkaballapur",
-  "Chikkamagaluru",
-  "Chitradurga",
-  "Dakshina Kannada",
-  "Davanagere",
-  "Dharwad",
-  "Gadag",
-  "Hassan",
-  "Haveri",
-  "Kalaburagi",
-  "Kodagu",
-  "Kolar",
-  "Koppal",
-  "Mandya",
-  "Mysuru",
-  "Raichur",
-  "Ramanagara",
-  "Shivamogga",
-  "Tumakuru",
-  "Udupi",
-  "Uttara Kannada",
-  "Vijayapura",
-  "Yadgir",
-];
-const arunachalPradeshDistricts = [
-  "Anjaw",
-  "Changlang",
-  "Dibang Valley",
-  "East Kameng",
-  "East Siang",
-  "Kamle",
-  "Kra Daadi",
-  "Kurung Kumey",
-  "Lepa Rada",
-  "Lohit",
-  "Longding",
-  "Lower Dibang Valley",
-  "Lower Siang",
-  "Lower Subansiri",
-  "Namsai",
-  "Pakke-Kessang",
-  "Papum Pare",
-  "Shi Yomi",
-  "Siang",
-  "Tawang",
-  "Tirap",
-  "Upper Siang",
-  "Upper Subansiri",
-  "West Kameng",
-  "West Siang",
-];
-const tamilNaduDistricts = [
-  "Ariyalur",
-  "Chengalpattu",
-  "Chennai",
-  "Coimbatore",
-  "Cuddalore",
-  "Dharmapuri",
-  "Dindigul",
-  "Erode",
-  "Kallakurichi",
-  "Kanchipuram",
-  "Kanyakumari",
-  "Karur",
-  "Krishnagiri",
-  "Madurai",
-  "Mayiladuthurai",
-  "Nagapattinam",
-  "Namakkal",
-  "Nilgiris",
-  "Perambalur",
-  "Pudukkottai",
-  "Ramanathapuram",
-  "Ranipet",
-  "Salem",
-  "Sivaganga",
-  "Tenkasi",
-  "Thanjavur",
-  "Theni",
-  "Thiruvallur",
-  "Thiruvarur",
-  "Thoothukudi",
-  "Tiruchirappalli",
-  "Tirunelveli",
-  "Tirupattur",
-  "Tiruppur",
-  "Tiruvannamalai",
-  "Vellore",
-  "Viluppuram",
-  "Virudhunagar",
-];
+// const apDistricts = [
+//   "Anantapur",
+//   "Chittoor",
+//   "East Godavari",
+//   "Guntur",
+//   "YSR Kadapa",
+//   "Krishna",
+//   "Kurnool",
+//   "Nellore",
+//   "Prakasam",
+//   "Srikakulam",
+//   "Visakhapatnam",
+//   "Vizianagaram",
+//   "West Godavari",
+//   "Anakapalli",
+//   "Annamayya",
+//   "Bapatla",
+//   "Dr. B.R. Ambedkar Konaseema",
+//   "Eluru",
+//   "NTR",
+//   "Palnadu",
+//   "Parvathipuram Manyam",
+//   "Sri Sathya Sai",
+//   "Sri Potti Sriramulu Nellore",
+//   "Tirupati",
+// ];
+// const tsDistricts = [
+//   "Adilabad",
+//   "Bhadradri Kothagudem",
+//   "Hyderabad",
+//   "Jagtial",
+//   "Jangaon",
+//   "Jayashankar Bhupalpally",
+//   "Jogulamba Gadwal",
+//   "Kamareddy",
+//   "Karimnagar",
+//   "Khammam",
+//   "Kumuram Bheem Asifabad",
+//   "Mahabubabad",
+//   "Mahabubnagar",
+//   "Mancherial",
+//   "Medak",
+//   "Medchal-Malkajgiri",
+//   "Mulugu",
+//   "Nagarkurnool",
+//   "Nalgonda",
+//   "Narayanpet",
+//   "Nirmal",
+//   "Nizamabad",
+//   "Peddapalli",
+//   "Rajanna Sircilla",
+//   "Rangareddy",
+//   "Sangareddy",
+//   "Siddipet",
+//   "Suryapet",
+//   "Vikarabad",
+//   "Wanaparthy",
+//   "Warangal Rural",
+//   "Warangal Urban",
+//   "Yadadri Bhuvanagiri",
+// ];
+// const karnatakaDistricts = [
+//   "Bagalkot",
+//   "Ballari",
+//   "Belagavi",
+//   "Bengaluru Rural",
+//   "Bengaluru Urban",
+//   "Bidar",
+//   "Chamarajanagar",
+//   "Chikkaballapur",
+//   "Chikkamagaluru",
+//   "Chitradurga",
+//   "Dakshina Kannada",
+//   "Davanagere",
+//   "Dharwad",
+//   "Gadag",
+//   "Hassan",
+//   "Haveri",
+//   "Kalaburagi",
+//   "Kodagu",
+//   "Kolar",
+//   "Koppal",
+//   "Mandya",
+//   "Mysuru",
+//   "Raichur",
+//   "Ramanagara",
+//   "Shivamogga",
+//   "Tumakuru",
+//   "Udupi",
+//   "Uttara Kannada",
+//   "Vijayapura",
+//   "Yadgir",
+// ];
+// const arunachalPradeshDistricts = [
+//   "Anjaw",
+//   "Changlang",
+//   "Dibang Valley",
+//   "East Kameng",
+//   "East Siang",
+//   "Kamle",
+//   "Kra Daadi",
+//   "Kurung Kumey",
+//   "Lepa Rada",
+//   "Lohit",
+//   "Longding",
+//   "Lower Dibang Valley",
+//   "Lower Siang",
+//   "Lower Subansiri",
+//   "Namsai",
+//   "Pakke-Kessang",
+//   "Papum Pare",
+//   "Shi Yomi",
+//   "Siang",
+//   "Tawang",
+//   "Tirap",
+//   "Upper Siang",
+//   "Upper Subansiri",
+//   "West Kameng",
+//   "West Siang",
+// ];
+// const tamilNaduDistricts = [
+//   "Ariyalur",
+//   "Chengalpattu",
+//   "Chennai",
+//   "Coimbatore",
+//   "Cuddalore",
+//   "Dharmapuri",
+//   "Dindigul",
+//   "Erode",
+//   "Kallakurichi",
+//   "Kanchipuram",
+//   "Kanyakumari",
+//   "Karur",
+//   "Krishnagiri",
+//   "Madurai",
+//   "Mayiladuthurai",
+//   "Nagapattinam",
+//   "Namakkal",
+//   "Nilgiris",
+//   "Perambalur",
+//   "Pudukkottai",
+//   "Ramanathapuram",
+//   "Ranipet",
+//   "Salem",
+//   "Sivaganga",
+//   "Tenkasi",
+//   "Thanjavur",
+//   "Theni",
+//   "Thiruvallur",
+//   "Thiruvarur",
+//   "Thoothukudi",
+//   "Tiruchirappalli",
+//   "Tirunelveli",
+//   "Tirupattur",
+//   "Tiruppur",
+//   "Tiruvannamalai",
+//   "Vellore",
+//   "Viluppuram",
+//   "Virudhunagar",
+// ];
 
 
-function showDistricts() {
-  const statesDropdown = document.getElementById("states").value;
-  const districtsDropdown = document.getElementById("districts");
+// function showDistricts() {
+//   const statesDropdown = document.getElementById("states").value;
+//   const districtsDropdown = document.getElementById("districts");
 
-  let districts = [];
+//   let districts = [];
 
-  switch (statesDropdown) {
-    case "ap":
-      districts = apDistricts;
-      break;
-    case "ts":
-      districts = tsDistricts;
-      break;
-    case "tn":
-      districts = tamilNaduDistricts;
-      break;
-    case "arunachal":
-      districts = arunachalPradeshDistricts;
-      break;
-    case "karnataka":
-      districts = karnatakaDistricts;
-      break;
-    default:
-      districts = [];
-  };
+//   switch (statesDropdown) {
+//     case "ap":
+//       districts = apDistricts;
+//       break;
+//     case "ts":
+//       districts = tsDistricts;
+//       break;
+//     case "tn":
+//       districts = tamilNaduDistricts;
+//       break;
+//     case "arunachal":
+//       districts = arunachalPradeshDistricts;
+//       break;
+//     case "karnataka":
+//       districts = karnatakaDistricts;
+//       break;
+//     default:
+//       districts = [];
+//   };
 
-  districtsDropdown.innerHTML = `<option value="">Select District</option>`;
+//   districtsDropdown.innerHTML = `<option value="">Select District</option>`;
 
-  districts.forEach((value) => {
-    const option = document.createElement("option");
-    option.value = value;
-    option.textContent = value;
-    districtsDropdown.appendChild(option);
-  });
-};
+//   districts.forEach((value) => {
+//     const option = document.createElement("option");
+//     option.value = value;
+//     option.textContent = value;
+//     districtsDropdown.appendChild(option);
+//   });
+// };
 
 
 // SetTimeout and setInterval
 
 // dom document object model and bom
 
-const input = document.querySelector(".input");
-const button = document.querySelector(".button");
-const lists = document.querySelector(".lists");
 
-button.addEventListener("click", (e) => {
-  e.preventDefault();
-  const li = document.createElement("li");
-  li.innerText = input.value;
-  lists.appendChild(li);
 
-  input.value = "";
-})
 
+
+// Todo list
+
+const todoInput = document.querySelector(".todoinput");
+const todoButton = document.querySelector(".todobutton");
+const todoUl = document.querySelector(".todoul");
+
+document.addEventListener("DOMContentLoaded", () => {
+    const storedTodoList = JSON.parse(localStorage.getItem("todoList"));
+    if (storedTodoList) {
+        storedTodoList.forEach((todo) => {
+            addToDoDomList(todo);
+        });
+    };
+});
+
+function addToDoDomList(todo) {
+    const div = document.createElement("div");
+    const li = document.createElement("li");
+    div.classList.add("todo-div");
+    li.classList.add("todo-li");
+    li.innerText = todo.text;
+    div.appendChild(li);
+    todoUl.appendChild(div);
+
+    const deleteButton = document.createElement("button");
+    deleteButton.classList.add("delete");
+    deleteButton.innerText = 'Delete';
+    div.appendChild(deleteButton);
+
+    deleteButton.addEventListener("click", () => {
+        div.parentNode.removeChild(div);
+        updateToDoList();
+    });
+
+    const editButton = document.createElement("button");
+    editButton.classList.add("edit");
+    editButton.innerText = 'Edit';
+div.appendChild(editButton);
+
+    editButton.addEventListener("click", () => {
+    const editInput = document.createElement("input");
+    editInput.type = "text";
+    editInput.value = li.innerText.trim(); // Trim whitespace
+
+    li.innerHTML = ""; // Clear the list item
+    li.appendChild(editInput);
+    editInput.addEventListener("keypress", (e) => {
+        if (e.key === "Enter") {
+            li.innerText = editInput.value;
+            updateToDoList();
+        }
+    });
+
+    });
+};
+
+
+function updateToDoList() {
+    const todos = Array.from(todoUl.querySelectorAll(".todo-li")).map((item) => {
+        return { text: item.innerText.trim() };
+    });
+    localStorage.setItem("todoList", JSON.stringify(todos));
+};
+
+todoButton.addEventListener("click", (e) => {
+    e.preventDefault();
+    if (todoInput.value.trim() !== "") {
+        const todo = { text: todoInput.value.trim() };
+        addToDoDomList(todo);
+        updateToDoList();
+        todoInput.value = "";
+    }
+});
+
+// Todo list
+
+// js object notation stringify , parse
+
+const myInfo = `{
+  "Name": "GFG", 
+  "Age":22,
+  "Department" : "Computer Science and Engineering",
+  "Year": "3rd"
+}`
+
+
+const Obj = JSON.parse(myInfo);
+console.log(Obj.Name)  
+console.log(Obj.Age)
+
+const myInfo1 = {
+  Name: "GFG",
+  Age:22,
+  Department : "Computer Science and Engineering",
+  Year: "3rd"
+  }
+  const Obj1 = JSON.stringify(myInfo1);
+  console.log(Obj1  )
+  
+
+
+// Real dom : js and virtual dom : react,angular and vue
+  
+// local : 5mb to 10mb,session : 5mb and cookies : 4kbs
 
 
 
